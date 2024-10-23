@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#siptitle {
+    display: flex-direction;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    font-size: 23px;
+}
+
+.emptycont {
+    height: 20px;
+}
+
+.main {
+    max-width: 100%;
+    border: 1px solid rgb(209, 190, 190);
+    border-radius: 10px;
+    padding:20px;
+}
+
+.tabswitch {
+    display: flex;
+    flex-direction: row;
+    font-size: 9px;
+}
+
+.tabswitch,h1{
+    font-family:cursive;
+}
+.tabswitch .active {
+    background-color: rgb(122, 235, 47);
+    font-weight: bold;
+}
+.siptab{
+    background-color: rgb(206, 203, 255);
+    border-radius: 5px;
+    margin-right: 10px; 
+}
+.siptab,h1{
+    padding: 03px;
+}
+
+.lumpsumtab{
+    background-color: rgb(206, 203, 255);
+    border-radius: 5px;
+}
+.lumpsumtab,h1{
+    padding: 03px;
+}
+
+.sip, .lumpsum{
+    color: rgb(0, 0, 0);
+}
+
+
+.tabswitch, h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+
+/* container for tab switch */
+
+.sipcontainer{
+    max-width: 100%;
+    border: 1px solid rgb(209, 190, 190);
+    border-radius: 10px;
+    padding:20px;
+}
+
+
+.calculator {
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color:#000000;
+}
+
+.results-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.chart-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invest-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+input[type="range"] {
+    height: 5px; /* Decrease the height of the track */
+}
+/*Responsive design*/
+
+@media (max-width: 588px) {
+    .main {
+       display: inline;
+    }
+    .calculator {
+        display: inline;
+    }
+    
+  }
+  @media (max-width: 414px) {
+    #siptitle {
+        font-size: 20px;
+    }
+    .tabswitch {
+        font-size: 7px;
+    }
+    .calculator {
+       font-size: 14px;
+    }
+  }

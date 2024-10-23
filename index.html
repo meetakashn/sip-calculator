@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MF sip calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <h1 id="siptitle">SIP Calculator</h1>
+    <div class="emptycont"></div>
+    <div class="main">
+        <div class="tabswitch">
+            <div id="sip-tab" class="siptab" onclick="showTab('sip')">
+                <h1 class="sip">SIP</h1>
+            </div>
+
+            <div id="lumpsum-tab" class="lumpsumtab" onclick="showTab('lumpsum')">
+                <h1 class="lumpsum">Lumpsum</h1>
+            </div>
+        </div>
+
+        <div class="tab-content">
+            <div id="sip-content" class="content active">
+                <div class="sipcontainer">
+                    <div class="calculator">
+                        <div class="input-section">
+                            <label>Monthly investment</label>
+                            <input type="range" id="monthlyInvestment" min="1000" max="100000" value="25000" step="500">
+                            <span id="monthlyInvestmentValue">₹25,000</span>
+                            <br>
+                            <label>Expected return rate (p.a)</label>
+                            
+                            <input type="range" id="returnRate" min="1" max="30" value="12" step="0.1">
+                            <span id="returnRateValue">12%</span>
+                            <br>
+                            <label>Time period</label>
+                            <input type="range" id="timePeriod" min="1" max="30" value="10" step="1">
+                            <span id="timePeriodValue">10 Yr</span>
+                            <br>
+                            <label>Step-up amount (per year)</label>
+                            <input type="range" id="stepUpAmount" min="0" max="5000" value="0" step="100">
+                            <span id="stepUpAmountValue">₹0</span>
+                        </div>
+                        <br>
+                        <div class="results-section">
+                            <div class="chart-placeholder"><canvas id="sipChart" width="400" height="400"></canvas>
+                            </div>
+                            <div class="results">
+                                <p>Invested amount: <span id="investedAmount">₹30,00,000</span></p>
+                                <p>Est. returns: <span id="estimatedReturns">₹28,08,477</span></p>
+                                <p>Total value: <span id="totalValue">₹58,08,477</span></p>
+                            </div>
+                            <button class="invest-button">INVEST NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="lumpsum-content" class="content">
+                <div class="sipcontainer">
+                    <div class="calculator">
+                        <div class="input-section">
+                            <label>Lumpsum investment</label>
+                            <input type="range" id="lumpsumInvestment" min="10000" max="1000000" value="500000"
+                                step="5000">
+                            <span id="lumpsumInvestmentValue">₹5,00,000</span>
+                            <br>
+                            <label>Expected return rate (p.a)</label>
+                            <input type="range" id="lumpsumReturnRate" min="1" max="30" value="12" step="0.1">
+                            <span id="lumpsumReturnRateValue">12%</span>
+                            <br>
+                            <label>Time period</label>
+                            <input type="range" id="lumpsumTimePeriod" min="1" max="30" value="10" step="1">
+                            <span id="lumpsumTimePeriodValue">10 Yr</span>
+                        </div>
+                        <br>
+                        <div class="results-section">
+                            <div class="chart-placeholder"><canvas id="lumpsumChart" width="400" height="400"></canvas>
+                            </div>
+                            <div class="results">
+                                <p>Invested amount: <span id="lumpsumInvestedAmount">₹5,00,000</span></p>
+                                <p>Est. returns: <span id="lumpsumEstimatedReturns">₹8,08,477</span></p>
+                                <p>Total value: <span id="lumpsumTotalValue">₹13,08,477</span></p>
+                            </div>
+                            <button class="invest-button">INVEST NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
